@@ -1,0 +1,962 @@
+{
+	"info": {
+		"_postman_id": "cc57daef-4e9f-4e32-8901-bd09fd188ec0",
+		"name": "ExamenFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/customers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sergio\",\n    \"last_name\": \"Alcaraz\",\n    \"dni\": \"3612894\",\n    \"address\": \"Calle 1\",\n    \"phone\": \"0991755021\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/customers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sergio\",\n    \"last_name\": \"Alcaraz C.\",\n    \"dni\": \"3612894\",\n    \"address\": \"Calle 1\",\n    \"phone\": \"0991755021\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/customers/8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/customers/8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/customers/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Mecanicos",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/mechanics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"mechanics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sergio\",\n    \"last_name\": \"Alcaraz\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/mechanics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"mechanics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sergio I\",\n    \"last_name\": \"Alcaraz C\",\n    \"is_idle\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/mechanics/14",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"mechanics",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/mechanics/9",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"mechanics",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/mechanics/14",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"mechanics",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c80ff352-00a8-424a-8f09-317fff994b9b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "142a0a0f-633c-445f-a481-977fb80ee10e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Administradores",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sergio\",\n    \"last_name\": \"Alcaraz C\",\n    \"email\": \"siac215@gmail.com\",\n    \"password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sergio\",\n    \"last_name\": \"Alcaraz C\",\n    \"email\": \"siac215@gmail.com\",\n    \"password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users/10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4ff7c297-e6fb-4d64-a7f4-0142ea7fa716",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "72d0580a-6ec9-4338-8b3c-69715646fe13",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Vehiculos",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/vehicles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/vehicles/12",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicles",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"license_plate\": \"AAAA 000\",\n    \"model\": \"Nissan Navara\",\n    \"year\": 2015,\n    \"color\": \"azul\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/vehicles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"license_plate\": \"AAAA 000\",\n    \"model\": \"Nissan Navara\",\n    \"year\": 2015,\n    \"color\": \"azul\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/vehicles/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicles",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/vehicles/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bb5145e1-c7e8-418b-a310-c809caac0ac0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c6667ecf-b073-49e8-8613-e3ed9475ad30",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Repuestos",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/parts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"parts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/parts/12",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"parts",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Faros traseros\",\n    \"price\": 1400.00\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/parts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"parts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Paragolpes delanteros\",\n    \"price\": 1500.00\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/parts/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"parts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/parts/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"parts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8dee7720-d019-4562-94cf-5dc800af2902",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5cdc023-fbd9-4c47-a1b8-0b1777307a35",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Registrar Ingreso",
+			"item": [
+				{
+					"name": "Registrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entry_date\": \"2020-11-21T10:50:35\",\n    \"person_id\": 1,\n    \"vehicle_id\": 2\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/registrations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"registrations"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Asignar Mecanicos",
+			"item": [
+				{
+					"name": "Asignar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"person_id\": 14,\n    \"registration_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/mechanics/assign",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"mechanics",
+								"assign"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Facturas",
+			"item": [
+				{
+					"name": "Agregar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bill_date\": \"2020-11-21T12:22:22\",\n    \"customer_id\": 1,\n    \"user_id\": 12,\n    \"details\": [\n        {\n            \"details\": \"Mano de obra - colocar paragolpes\",\n            \"amount\": 100.00\n        },\n        {\n            \"part_id\": 3\n        },\n        {\n            \"part_id\": 4\n        },\n        {\n            \"details\": \"Colocacion de faro\",\n            \"amount\": 200.00\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/bills",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bills"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0dc2c1c9-3d3a-43aa-b0e0-a1d536ff41b3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e7f2e20b-9f75-4f4b-a78b-fed21f174cad",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "9db8c688-1a74-4262-b21b-f7fa4c0a2e16",
+			"key": "baseUrl",
+			"value": "http://localhost:8765"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
